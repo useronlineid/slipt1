@@ -136,7 +136,7 @@ function updateDisplay() {
             const canvasWidth = canvas.width;
             const centerX = canvasWidth / 2;
           
-            const amountX = centerX - (ctx.measureText(totalText).width / 0.83);
+            const amountX = centerX - (ctx.measureText(totalText).width / 0.82);
             const amountY = 504.0;
             
             drawText(ctx, amountText, amountX, amountY, '61.44px TTB Money', '#00225c', '600', 'left', 1.5, 3, 0, 0, 500, 1);
