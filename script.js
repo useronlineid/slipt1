@@ -48,6 +48,7 @@ function updateDisplay() {
     const datetime = document.getElementById('datetime').value || '-';
     const selectedImage = document.getElementById('imageSelect').value || '';
     const QRCode = document.getElementById('QRCode').value || '';
+    const spacing = parseInt(document.getElementById('spacing').value, 10) || 6;
 
     let bankLogoUrl = '';
     switch (bank) {
@@ -142,7 +143,7 @@ function updateDisplay() {
             drawText(ctx, amountText, amountX, amountY, '61.44px TTB Money', '#00225c', '600', 'left', 1.5, 3, 0, 0, 500, 1);
             
             const amountWidth = ctx.measureText(amountText).width;
-            drawText(ctx, amountUnit, amountX + amountWidth + 7, amountY, '44.00px TTB Money', '#00225c', '600', 'left', 1.5, 0, 0, 0, 500, 1.5);
+            drawText(ctx, amountUnit, amountX + amountWidth + spacing, amountY, '44.00px TTB Money', '#00225c', '600', 'left', 1.5, 0, 0, 0, 500, 1.5);
             
             
             drawText(ctx, `${QRCode}`, 238.9, 599.0, '33px Kanit', '#4e4e4e', '500', 'left', 1.5, 5, 0, 0, 500, 0);
